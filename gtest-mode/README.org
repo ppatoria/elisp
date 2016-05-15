@@ -8,7 +8,7 @@ Set the gtest target (executable which contains test) path in variable "gtest-ta
 #+BEGIN_SRC   
   M-x customize-variable gtest-target "full path to the gtest target"
 #+END_SRC
-[[gtest-img/customize-target-path.png]]
+[[./gtest-img/customize-target-path.png]]
 
 
 ** List Tests:
@@ -16,7 +16,7 @@ Set the gtest target (executable which contains test) path in variable "gtest-ta
 #+BEGIN_SRC 
  M-x gtest-list
 #+END_SRC
-[[gtest-img/gtest-list.png]]
+[[./gtest-img/gtest-list.png]]
 
 
 ** Run Tests:
@@ -24,23 +24,23 @@ Set the gtest target (executable which contains test) path in variable "gtest-ta
 *** Usage 1:
 - list tests
  
-[[gtest-img/gtest-list.png]]
+[[./gtest-img/gtest-list.png]]
 
 - go to the test to run and run 'gtest-run-at-point'
-[[gtest-img/gtest-run-at-point.png]]
+[[./gtest-img/gtest-run-at-point.png]]
 
-[[gtest-img/gtet-run-at-point-execute.png]]
+[[./gtest-img/gtet-run-at-point-execute.png]]
 
 *** Usage 2:
 
 - open the source and go to the test (macro) to run
-[[gtest-img/gtest-run-at-point-source.png]]
+[[./gtest-img/gtest-run-at-point-source.png]]
 
 - run 'gtest-run-at-point'
-[[gtest-img/gtest-run-at-point-source-execute.png]]
+[[./gtest-img/gtest-run-at-point-source-execute.png]]
 
 *** Usage 3:
 - run 'gtest-run' either specify the test or entire test fixture to run .
 
-[[gtest-img/gtest-run.png]]
-[[gtest-img/gtest-run-execute.png]]
+[[./gtest-img/gtest-run.png]]
+[[./gtest-img/gtest-run-execute.png]]
