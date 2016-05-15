@@ -1,3 +1,13 @@
+;;; gtest-mode.el --- google test runner
+
+;; Author: Pralay Patoria <ppatoria@gmail.com> May 2016
+
+;; Commentary:
+
+;; This minor mode provides following functionalities.
+;; - List tests
+;; - Run test interactively
+
 (defgroup gtest nil
   "gtest group"	
   :group 'tools)
