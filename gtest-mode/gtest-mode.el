@@ -3,7 +3,7 @@
   :group 'tools)
 
 
-(defcustom gtest-target "iltest/testil/testil"
+(defcustom gtest-target ""
   "gtest target"
   :group 'tools'
   :type 'string)
@@ -30,6 +30,7 @@
 
 
 (defun parse-test ()
+  "parse the test from the source"
   (interactive)
   (setq test (thing-at-point 'line t))
   (when (string-match "TEST.*" test)
@@ -47,11 +48,9 @@
 	""
 	test))))))
   
-(defun test-parse-test ()
-  (interactive)
-  (message "%s" (parse-test)))
 
 (defun search-test-at-point-in-source-file ()
+  "search test from the source"
   (interactive)
   (parse-test))
 
