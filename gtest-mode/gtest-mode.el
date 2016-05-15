@@ -13,9 +13,13 @@
   (interactive)
   (shell-command (concat gtest-target " --gtest_list_tests" "&")))
 
-(defun gtest-run(filter)
+(defun gtest-run (filter)
   "Run gtest as per filter"
-  (interactive "sFilter: ")
+  (interactive (list
+		(read-string
+		 (format "filter (%s): "
+			 (concat "*" (thing-at-point 'symbol) "*"))
+			     nil nil (concat"*" (thing-at-point 'symbol) "*"))))
   (shell-command (concat gtest-target " --gtest_filter=" filter "&")))
 
 (defun is-line-at-point-is-test-hierarchy-or-fixture ()
