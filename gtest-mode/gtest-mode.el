@@ -18,6 +18,11 @@
   (interactive "sFilter: ")
   (shell-command (concat gtest-target " --gtest_filter=" filter "&")))
 
+(defun is-line-at-point-is-test-hierarchy-or-fixture ()
+  ""
+  (interactive)
+  (string-match "[.]" (thing-at-point 'line t)))
+
 (defun search-test-at-point ()
   ""
   (interactive)
@@ -35,3 +40,14 @@
   (push (regexp-quote test) regexp-history)
   (call-interactively(gtest-run test))
   )
+
+(define-minor-mode gtest-mode
+  "gtest runner"
+  :lighter "gtest-mode"
+  :keymap (let ((map (make-sparse-keymap)))
+	    (define-key map (kbd "C-c l") 'gtest-list)
+	    (define-key map (kbd "C-c t") 'gtest-run)
+	    (define-key map (kbd "C-M-t") 'gtest-run)
+	    map))
+(provide 'gtest-mode)
+	    
