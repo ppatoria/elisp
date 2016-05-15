@@ -47,3 +47,15 @@
     (concat test-hierarchy-or-fixture "." test)))
 
 
+;; (defun gtest-run-t  (filter)
+;;   (interactive (list
+;; 		(read-string (format "filter (%s): " (thing-at-point 'filter))
+;; 			     nil nil (thing-at-point 'filter))))
+;;     (message "The filter is %s" filter))
+(defun gtest-run-t (filter)
+  (interactive (list
+		(read-string
+		 (format "filter (%s): "
+			 (concat "*" (thing-at-point 'symbol) "*"))
+			     nil nil (thing-at-point 'symbol))))
+    (message "The filter is %s" filter))
