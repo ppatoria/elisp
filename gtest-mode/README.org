@@ -21,7 +21,13 @@ Set the gtest target (executable which contains test) path in variable "gtest-ta
 
 ** Run Tests:
 
-*** Usage 1:
+*** Run all tests
+#+BEGIN_SRC 
+M-x gtest-run-all
+#+END_SRC
+
+*** Run test with filter
+**** Usage 1:
 - list tests
  
 [[./gtest-img/gtest-list.png]]
@@ -31,7 +37,7 @@ Set the gtest target (executable which contains test) path in variable "gtest-ta
 
 [[./gtest-img/gtet-run-at-point-execute.png]]
 
-*** Usage 2:
+**** Usage 2:
 
 - open the source and go to the test (macro) to run
 [[./gtest-img/gtest-run-at-point-source.png]]
@@ -39,7 +45,7 @@ Set the gtest target (executable which contains test) path in variable "gtest-ta
 - run 'gtest-run-at-point'
 [[./gtest-img/gtest-run-at-point-source-execute.png]]
 
-*** Usage 3:
+**** Usage 3:
 - run 'gtest-run' either specify the test or entire test fixture to run .
 
 [[./gtest-img/gtest-run.png]]

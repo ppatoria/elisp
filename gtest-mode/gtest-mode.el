@@ -23,6 +23,11 @@
   (interactive)
   (shell-command (concat gtest-target " --gtest_list_tests" "&")))
 
+(defun gtest-run-all ()
+  "run all the tests"
+  (interactive)
+  (shell-command (concat gtest-target "&")))
+
 (defun gtest-run (filter)
   "Run gtest as per filter"
   (interactive (list
