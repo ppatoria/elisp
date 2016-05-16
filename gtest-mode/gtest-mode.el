@@ -1,7 +1,7 @@
 ;;; gtest-mode.el --- google test runner
 
 ;; Author: Pralay Patoria <ppatoria@gmail.com> May 2016
-
+;; keywords: gtest runner mode emacs
 ;; Commentary:
 
 ;; This minor mode provides following functionalities.
